@@ -4,15 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=1024"><!-- non responsive -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --><!-- responsive -->
 	<meta name="description" content="Nomad is a product recognition API built for enterprise solutions">
 	<meta name="author" content="Nomad Team">
 	<title>Nomad | API For Product Recognition</title>
 	<link rel="icon" 
 	  type="image/png" 
 	  href="img/head.png">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet"> 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/landing-page.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -32,6 +33,7 @@
 					<ul class="nav navbar-nav navbar-center">
 						<li><a href="#product">Product</a></li>
 						<li><a href="#uses">Uses</a></li>
+						<li><a href="#team">Team</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="mailto:hello@epnomad.com">Chat</a></li>
@@ -127,6 +129,42 @@
 		</div>
 	</section>
 
+	<section id="ad_about">
+		<div class="container text-center">
+			<h2>Power your Business</h2>
+			<h4 style="margin-top:50px">Use Nomad to recognize products in pictures, advertise your products on social media, and automatically tag products</h4>
+		</div>
+	</section>
+
+	<section id="team">
+		<div class="container">
+			<h2 class="text-center" style="margin-top: 100px">Meet the Team</h2>
+			<h4 class="text-center" style="margin-top: 25px">Working Day In And Day Out</h4>
+			<div class="row text-center" style="margin-top: 75px">
+				<div class="col-md-3">
+					<img src="img/ethan.jpg" class="img-circle img-responsive">
+					<h4 style="margin-top: 25px">Ethan Reid</h4>
+					<p>CEO</p>
+				</div>
+				<div class="col-md-3">
+					<img src="img/pulkit.jpg" class="img-circle img-responsive">
+					<h4 style="margin-top: 25px">Pulkit Mahajan</h4>
+					<p>CTO</p>
+				</div>
+				<div class="col-md-3">
+					<img src="img/devin.jpg" class="img-circle img-responsive">
+					<h4 style="margin-top: 25px">Devin Mui</h4>
+					<p>Lead Developer</p>
+				</div>
+				<div class="col-md-3">
+					<img src="img/jesse.jpg" class="img-circle img-responsive">
+					<h4 style="margin-top: 25px">Jesse Liang</h4>
+					<p>Developer</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section style="background: #f5f5f5">
 		<div class="sponsors">
 			<div class="col-md-offset-3 col-md-2">
@@ -157,7 +195,52 @@
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script src="js/isInViewport.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$('#loader').hide()
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1500);
+				return false;
+			  }
+			}
+		  });
+		});
+		$(window).scroll(function(){
+			// $('video').each(function(){
+			// 	if ($(this).is(":in-viewport")) {
+			// 		$(this)[0].play();
+			// 	} else {
+			// 		$(this)[0].pause();
+			// 	}
+			// })
+			if($('.ad_demo')[0].is(":in-viewport")){
+				$('.ad_demo')[0].play()
+			} else {
+				$('.ad_demo')[0].pause()
+			}
+		})
+		$('#recognize').click(function(){
+			var currentIndex = $('div.active').index() // gets which picture
+			$('#json').text('Doing magic...')
+			$('#loader').fadeIn('fast')
+			var recognized = ["Lambskin & Gold-Tone Metal Black & Burgundy Large Classic Handbag", "Nike Flex", "Nike Air Presto"]
+			var urls = ["http://www.chanel.com/en_US/fashion/products/handbags/g/s.large-classic-handbag-lambskin.0V.A58601Y01295C3906.sto.ico.html","http://www.zappos.com/p/nike-flex-2016-rn-black-cool-grey-white/product/8662215/color/69638?zlfid=191&ref=","https://www.endclothing.com/au/nike-air-presto-848132-301.html"]
+			var times = ["0.149s", "0.098s", "0.110s"]
+			var price = ["6000","80.00", "69"]
+			var currency = ["US","US","AU"]
+			setTimeout(function(){
+				$('#loader').hide()
+				$('#json').text('{\n\t"result": {\n\t\t"recognized_as": "' + recognized[currentIndex] + '", \n\t\t"price": '+ price[currentIndex] +', \n\t\t"currency": "'+ currency[currentIndex] +'",\n\t\t"url": "' + urls[currentIndex] + '",\n\t\t"elapsed_time": "'+ times[currentIndex] +'"\n\t}\n}')
+			}, 1000)
+		})
+	</script>
 </body>
