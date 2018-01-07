@@ -1,66 +1,415 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=1024"><!-- non responsive -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --><!-- responsive -->
-	<meta name="description" content="Nomad is a product recognition API built for enterprise solutions">
-	<meta name="author" content="Nomad Team">
-	<title>Nomad | API For Product Recognition</title>
-	<link rel="icon" 
-	  type="image/png" 
-	  href="img/head.png">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet"> 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/landing-page.css" rel="stylesheet">
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Nomad</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css"> 
+   <link rel="stylesheet" href="css/vendor.css"> 
+   <link rel="stylesheet" href="css/main.css">    
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
-<body>
-	<div class="hero">
-		<nav class="navbar navbar-default" role="navigation">    
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand"><img src="img/logo.png" class="img-responsive" style="height: 20px"></a>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-center">
-						<li><a href="#product">Product</a></li>
-						<li><a href="#uses">Uses</a></li>
-						<li><a href="#team">Team</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="mailto:hello@epnomad.com">Chat</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+<body id="top">
+	
+	<!-- header 
+   ================================================== -->
+   <header class="main-header">
+   	
+   	<div class="logo"><a href="index.html">Elevat</a></div> 
 
-		<div class="vertical-align container" style="color: #eee">
-			<div class="col-md-6">
-				<h2 style="font-weight: 100; margin-bottom: 50px">API For Product Recognition</h2>
-				<h4 style="font-weight: 100; margin-bottom: 50px">Fast image recognition to accelerate your business</h4>
-				<a href="#product" class="btn-blue">Learn More</a>
-			</div>
-		</div>
-		<div class="col-md-6 col-md-offset-6" style="margin-top: -170px;">
-			<div class="demo">
-				<video height=520 width=284 muted autoplay loop>
-					<source src="demo.mp4" type="video/mp4">
-					Your browser does not support the video tag
-				</video>
-			</div>
-		</div>
-		
-	</div>
+	   <a class="menu-toggle" href="#"><span>Menu</span></a>   	
 
-	<section id="product" style="margin-top: 100px">
+   </header>
+
+   <!-- main navigation 
+   ================================================== -->
+   <nav id="menu-nav-wrap">
+
+   	<h3>Navigation</h3>   	
+		<ul class="nav-list">
+			<li><a class="smoothscroll" href="#intro" title="">Home</a></li>
+			<li><a class="smoothscroll" href="#features" title="">Features</a></li>
+			<li><a class="smoothscroll" href="#infos" title="">Product Info</a></li>
+			<li><a class="smoothscroll" href="#stats" title="">Stats</a></li>
+			<li><a class="smoothscroll" href="#pricing" title="">Pricing</a></li>					
+			<li><a class="smoothscroll" href="#testimonials" title="">Testimonials</a></li>	
+			<li><a class="smoothscroll" href="#download" title="">Download</a></li>	
+			<li><a class="smoothscroll" href="#subscribe" title="">Newsletter</a></li>			
+		</ul>
+
+		<h3>We Recommend Dreamhost</h3>  
+		<p class="sponsor-text">
+			Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
+			Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
+			<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
+		</p>
+
+		<div class="action">
+			<a class="button" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a>
+		</div>
+
+	</nav> <!-- /menu-nav-wrap -->
+
+
+	<!-- main content wrap
+   ================================================== -->
+   <div id="main-content-wrap">
+
+
+		<!-- main content wrap
+   	================================================== -->
+   	<section id="intro">
+
+		   <!-- <div class="shadow-overlay"></div> -->
+		   
+		   <div class="row intro-content">
+		   	<div class="col-twelve">
+		   	  <h3 class="animate-intro">Introducing Nomad</h3>
+		   	  <h1 class="animate-intro"> The Future of Discovery. </h1>
+		   	  <div class="buttons">
+						<a class="button stroke smoothscroll animate-intro" href="#features" title="">Features</a>
+						<a class="button stroke smoothscroll animate-intro" href="#download" title="">Contact</a>
+					</div>					
+
+					<img src="images/app-screenshot-big.jpg" alt="" class="animate-intro">   			
+
+		  	 </div> <!-- /twelve --> 		   			
+		   </div> <!-- /row -->   
+
+		</section> <!-- /intro -->
+
+
+		<!-- features
+   	================================================== -->
+		<section id="features">
+
+			<div class="row section-intro group animate-this">	
+	   		<div class="col-twelve with-bottom-line">
+	   		  <h2>The API that enables your customers to Discover</h2>
+	   		  <p class="lead">Some features you will love</p>
+	   		</div>   		
+	   	</div>
+
+			<div class="row features-wrap">
+					     		
+				<div class="features-list block-1-3 block-s-1-2 block-tab-full">
+
+					<div class="bgrid feature animate-this">	
+
+						<span class="feature-count">01.</span>            
+
+					   <div class="feature-content">
+					     <h3>Train on Stock Product Images</h3>
+					     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						   </p>
+						         		
+						</div> 	         	 
+
+					</div> <!-- /bgrid -->
+
+					<div class="bgrid feature animate-this">	
+
+						<span class="feature-count">02.</span>            
+
+					   <div class="feature-content">
+					     <h3>Recognize Exact Product</h3>
+					     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						   </p>
+						         		
+						</div> 	         	 
+
+					</div> <!-- /bgrid -->
+
+					<div class="bgrid feature animate-this">	
+
+						<span class="feature-count">03.</span>            
+
+					   <div class="feature-content">
+					     <h3>Find Visualy Simular Product</h3>
+					     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						   </p>
+						         		
+						</div> 	         	 
+
+					</div> <!-- /bgrid -->
+
+					<div class="bgrid feature animate-this">	
+
+						<span class="feature-count">04.</span>            
+
+					   <div class="feature-content">
+					     <h3>Easy to use API</h3>
+					     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						   </p>
+						         		
+						</div> 	         	 
+
+					</div> <!-- /bgrid -->
+
+					<div class="bgrid feature animate-this">	
+
+						<span class="feature-count">05.</span>            
+
+					   <div class="feature-content">
+					     <h3>Customizable</h3>
+					     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						   </p>
+						         		
+						</div> 	         	 
+
+					</div> <!-- /bgrid -->
+
+					<div class="bgrid feature animate-this">	
+
+						<span class="feature-count">06.</span>            
+
+					   <div class="feature-content">
+					     <h3>Infinatiably Scalable</h3>
+					     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						   </p>
+						         		
+						</div> 	         	 
+
+					</div> <!-- /bgrid -->
+
+				</div> <!-- /features-list --> 				
+
+			</div> <!-- /features-wrap -->
+			
+		</section> <!-- /features -->
+
+
+		<!-- infos
+   	================================================== -->
+   	<section id="infos">
+
+   		<div class="info-entry">
+
+   			<div class="half-white"></div>
+
+   			<div class="row info-entry-content">
+
+   				<div class="media-wrap">
+   					<div class="media animate-this"  data-animate="fadeInRight">
+   						<img src="images/NomadDemo.gif" alt="">
+   					</div>   				      				
+   				</div>
+
+   				<div class="col-six text-part">   				
+   					
+   					<h5 class="animate-this" data-animate="fadeInLeft">Some Cool Stuff</h5>
+				  <h2 class="animate-this" data-animate="fadeInLeft">Find Exact and Simular Matches</h2>
+   					<p class="animate-this" data-animate="fadeInLeft">Info about this.</p>
+   					<a href="#" class="button animate-this" data-animate="fadeInLeft">Learn More</a>
+   			 					
+   				</div>   				
+   				
+   			</div> <!-- /info-entry-content -->
+
+   		</div> <!-- /info-entry -->
+
+   		<div class="info-entry">
+
+   			<div class="half-grey"></div>
+
+   			<div class="row info-entry-content">
+   			
+	            <div class="media-wrap">
+	            	<div class="media animate-this" data-animate="fadeInLeft">
+	            		<div class="fluid-video-wrapper">
+		               <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+		            </div>
+	            	</div>   				
+	   			</div>
+
+	   			<div class="col-six text-part">
+	   			  <h5 class="animate-this" data-animate="fadeInRight">Really Cool Stuff</h5>
+	   			  <h2 class="animate-this" data-animate="fadeInRight">Train On Only a Few Images</h2>
+   					<p class="animate-this" data-animate="fadeInRight">Lorem ipsum Sunt adipisicing adipisicing esse exercitation consequat sed irure commodo cupidatat aute ea adipisicing consectetur nulla consequat irure consectetur veniam sit sit qui reprehenderit officia sunt nulla elit nisi proident.</p>
+
+   					<a href="#" class="button animate-this" data-animate="fadeInRight">Learn More</a>
+   			 					
+			  </div>
+			
+
+
+		  </div> 
+			
+			<!-- /info-entry-content -->
+
+   		</div> <!-- /info-entry -->
+		<div class="info-entry">
+
+   			<div class="half-grey"></div>
+
+   			<div class="row info-entry-content">
+
+   				<div class="media-wrap">
+   					<div class="media animate-this"  data-animate="fadeInRight">
+   						<img src="images/NomadDemo.gif" alt="">
+   					</div>   				      				
+   				</div>
+
+   				<div class="col-six text-part">
+   				  <h5 class="animate-this" data-animate="fadeInLeft">GUI and API</h5>
+   				  <h2 class="animate-this" data-animate="fadeInLeft">Build Withought Code</h2>
+   				  <p class="animate-this" data-animate="fadeInLeft">Info about this.</p>
+   					<a href="#" class="button animate-this" data-animate="fadeInLeft">Learn More</a>
+   			 					
+			  </div>   				
+   				
+   			</div> <!-- /info-entry-content -->
+
+   		</div>
+   	</section> <!-- infos -->
+
+
+		<!-- stats
+   	================================================== -->
+   	<section id="stats" class="count-up">
+
+			<div class="row">
+				<div class="col-twelve">
+
+					<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+
+						<div class="bgrid stat">
+
+							<div class="icon-part">
+								<i class="icon-pencil-ruler"></i>
+							</div>
+
+							<h3 class="stat-count">110</h3>
+
+							<h5 class="stat-title">
+								Awesome Projects
+							</h5>
+
+						</div> <!-- /stat -->					
+
+						<div class="bgrid stat">
+
+							<div class="icon-part">
+								<i class="icon-location-user"></i>
+							</div>
+
+							<h3 class="stat-count">9050</h3>
+
+							<h5 class="stat-title">
+								Clients Served
+							</h5>
+
+						</div> <!-- /stat -->
+
+						<div class="bgrid stat">
+
+							<div class="icon-part">
+								<i class="icon-rewards-medal-1"></i>
+							</div>
+
+							<h3 class="stat-count">210</h3>
+
+							<h5 class="stat-title">
+								Awards Received
+							</h5>
+
+						</div> <!-- /stat -->									
+
+						<div class="bgrid stat">
+
+							<div class="icon-part">
+								<i class="icon-alien"></i>
+							</div>
+
+							<h3 class="stat-count">123</h3>
+
+							<h5 class="stat-title">
+								Crazy Ideas
+							</h5>
+
+						</div> <!-- /stat -->
+
+						<div class="bgrid stat">
+
+							<div class="icon-part">
+								<i class="icon-coffee-mug"></i>
+							</div>
+
+							<h3 class="stat-count">1500</h3>
+
+							<h5 class="stat-title">
+								Coffee Cups
+							</h5>
+
+						</div> <!-- /stat -->
+
+						<div class="bgrid stat">
+
+							<div class="icon-part">
+								<i class="icon-hourglass"></i>
+							</div>
+
+							<h3 class="stat-count">7200</h3>
+
+							<h5 class="stat-title">
+								Hours
+							</h5>
+
+						</div> <!-- /stat -->
+
+					</div> <!-- /stats-list -->
+
+				</div> <!-- /twelve -->
+			</div> <!-- /row -->
+
+		</section> 
+	 <div class="info-entry">
+
+   			<div class="half-grey"></div>
+
+   			<div class="row info-entry-content">
+
+   				<div class="media-wrap">
+   					<pre style="height: 300px"><code id="json">Press recognize to get a JSON response!</code></pre>
+					<a id="recognize" class="btn-blue">Recognize</a>
+   					</div>   				      				
+   				</div>
+
+   				<div class="col-six text-part">
+   				  <h5 class="animate-this" data-animate="fadeInLeft">GUI and API</h5>
+   				  <h2 class="animate-this" data-animate="fadeInLeft">Build Withought Code</h2>
+   				  <p class="animate-this" data-animate="fadeInLeft">Info about this.</p>
+   					<a href="#" class="button animate-this" data-animate="fadeInLeft">Learn More</a>
+   			 					
+			  </div>   				
+   				
+   			</div> <!-- /info-entry-content -->
+
+   		</div>
+	   <section id="product" style="margin-top: 100px">
 		<div class="container">
 			<h2 class="text-center">Meet Nomad</h2>
 			<h4 style="margin-top: 50px;" class="text-center">Our deep learning algorithms accurately recognize your products in your images</h4>
@@ -80,13 +429,13 @@
 						  </ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img class="first-slide" src="img/handbag.jpg">
+								<img class="first-slide" src="images/handbag.jpg">
 							</div>
 							<div class="item">
-							  <img class="second-slide" src="img/nikeflex.jpg" class="img-responsive img-rounded">
+							  <img class="second-slide" src="images/nikeflex.jpg" class="img-responsive img-rounded">
 							</div>
 							<div class="item">
-							  <img class="third-slide" src="img/nikeair.jpg">
+							  <img class="third-slide" src="images/nikeair.jpg">
 							</div>
 						</div>
 					</div>
@@ -95,142 +444,294 @@
 			</div>
 		</div>
 	</section>
+	   <!-- /stats -->
 
-	<section id="uses">
-		<div class="container">
-			<h2 class="text-center" style="margin-top: 25px">Unique Use Cases</h2>
-			<div class="row text-center" style="margin-top: 50px">
-				<div class="col-md-4">
-					<h1><span class="glyphicon glyphicon-shopping-cart"></span></h1>
-					<h4>Retail</h4>
-				</div>
-				<div class="col-md-4">
-					<h1><span class="glyphicon glyphicon-phone"></span></h1>
-					<h4>Advertisement</h4>
-				</div>
-				<div class="col-md-4">
-					<h1><span class="glyphicon glyphicon-tags"></span></h1>
-					<h4>Auto Tags</h4>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<section id="ad_demo">
-		<div class="container">
-			<h2 class="text-center" style="margin-top: 100px">Utilized in Advertisement</h2>
-			<h4 class="text-center" style="margin-top: 25px">Nomad found a product posted on social media and took us to the retailers site.</h4>
-			<div class="ad_demo" style="margin-top: 50px">
-				<video width=920 muted autoplay loop>
-					<source src="ad_demo.mp4" type="video/mp4">
-					Your browser does not support the video tag
-				</video>
-			</div>
-		</div>
-	</section>
+		<!-- pricing
+   	================================================== -->
+		<section id="pricing">
 
-	<section id="ad_about">
-		<div class="container text-center">
-			<h2>Power your Business</h2>
-			<h4 style="margin-top:50px">Use Nomad to recognize products in pictures, advertise your products on social media, and automatically tag products</h4>
-		</div>
-	</section>
+	   	<div class="row section-intro animate-this">
+	   		<div class="col-twelve with-bottom-line">
 
-	<section id="team">
-		<div class="container">
-			<h2 class="text-center" style="margin-top: 100px">Meet the Team</h2>
-			<h4 class="text-center" style="margin-top: 25px">Working Day In And Day Out</h4>
-			<div class="row text-center" style="margin-top: 75px">
-				<div class="col-md-3 col-md-offset-3">
-					<img src="img/ethan.jpg" class="img-circle img-responsive">
-					<h4 style="margin-top: 25px">Ethan Reid</h4>
-					<p>CEO</p>
-				</div>
-				<div class="col-md-3">
-					<img src="img/pulkit.jpg" class="img-circle img-responsive">
-					<h4 style="margin-top: 25px">Pulkit Mahajan</h4>
-					<p>CTO</p>
-				</div>
-</div>
-		</div>
-	</section>
+	   			<h2>Plans and Pricing.</h2>
 
-	<section style="background: #f5f5f5">
-		<div class="sponsors">
-			<div class="col-md-offset-3 col-md-2">
-				<img src="img/nvidia.png" class="img-responsive">
-			</div>
-			<div class="col-md-2">
-				<img src="img/hackcelerator.png" class="img-responsive">
-			</div>
-			<div class="col-md-2">
-				<img src="img/hpe.png" class="img-responsive">
-			</div>
-		</div>
-		
-	</section>
+	   			<p class="lead">Lorem ipsum Tempor do Excepteur nulla aute deserunt reprehenderit aute commodo aliquip laboris velit eu esse exercitation ex fugiat pariatur aute consequat. Lorem ipsum Fugiat mollit quis qui. Lorem ipsum Duis Excepteur Duis magna fugiat incididunt qui id quis dolor nisi irure proident labore ut in incididunt eiusmod est anim.</p>
 
-	<div class="footer">
-		<div class="container" style="padding-top: 75px; padding-bottom: 75px">
-			<div class="col-md-3">
-				<img src="img/logo.png" class="img-responsive" style="height: 25px;">
-				<p>Product Recognition for Enterprise</p>
-				<p>Copyright &copy; 2017 EPNomad Inc. All rights reserved</p>
-			</div>
-			<div class="col-md-3">
-				<p>Contact</p>
-				<p>hello@epnomad.com</p>
-				<p>support@epnomad.com</p>
-			</div>
-		</div>
+	   		</div>   		
+	   	</div>
+
+	   	<div class="row pricing-content">
+
+	         <div class="pricing-tables block-1-3  group">
+
+	            <div class="bgrid animate-this"> 
+
+	            	<div class="price-block">
+
+	            		<div class="top-part">
+
+		            		<h3 class="plan-title">Starter</h3>
+			               <p class="plan-price"><sup>$</sup>4.99</p>
+			               <p class="price-month">Per month</p>		             
+
+		            	</div>                
+
+		               <div class="bottom-part">
+
+		            		<ul class="features">
+			                  <li><strong>3GB</strong> Storage</li>
+			                  <li><strong>10GB</strong> Bandwidth</li>		                  
+			                  <li><strong>5</strong> Databases</li>		                  
+			                  <li><strong>30</strong> Email Accounts</li>
+			               </ul>
+
+			               <a class="button large" href="">Get Started</a>
+
+		            	</div>
+
+	            	</div>           	
+	                        
+				   </div> <!-- /bgrid -->
+
+	            <div class="bgrid animate-this">
+
+	            	<div class="price-block primary" data-info="popular">
+
+	            		<div class="top-part">
+
+		            		<h3 class="plan-title">Standard</h3>
+			               <p class="plan-price"><sup>$</sup>9.99</p>
+			               <p class="price-month">Per month</p>							
+
+		            	</div>               
+
+		               <div class="bottom-part">
+
+		            		<ul class="features">
+			                  <li><strong>5GB</strong> Storage</li>
+			                  <li><strong>15GB</strong> Bandwidth</li>		                  
+			                  <li><strong>7</strong> Databases</li>		                  
+			                  <li><strong>40</strong> Email Accounts</li>
+			               </ul>
+
+			               <a class="button large" href="">Get Started</a>
+
+		            	</div>
+	            		
+	            	</div>            	                 
+
+				  </div> <!-- /bgrid -->
+
+	           <div class="bgrid animate-this">               
+
+	               <div class="price-block">
+
+	            		<div class="top-part">
+
+		            		<h3 class="plan-title">Premium</h3>
+			               <p class="plan-price"><sup>$</sup>29.99</p>
+			               <p class="price-month">Per month</p>	                		               
+
+		            	</div> 
+		            	
+							<div class="bottom-part">
+
+		            		<ul class="features">
+			                  <li><strong>10GB</strong> Storage</li>
+			                  <li><strong>30GB</strong> Bandwidth</li>		                  
+			                  <li><strong>15</strong> Databases</li>		                  
+			                  <li><strong>60</strong> Email Accounts</li>
+			               </ul>
+
+			               <a class="button large" href="">Get Started</a>
+
+		            	</div>	            		                
+	            		
+	            	</div>                              
+
+				   </div> <!-- /bgrid -->		           
+
+	         </div> <!-- /pricing-tables --> 
+
+	      </div> <!-- /pricing-content --> 
+
+	   </section> <!-- Pricing -->
+
+
+	   <!-- testimonials
+   	================================================== -->
+	   <section id="testimonials">
+	   	<div class="row testimonial-content">
+	   		<div class="col-twelve">
+	   		  <h2 class="h01 animate-this"> News</h2>
+	   		  <div id="testimonial-slider" class="flexslider animate-this">
+						<ul class="slides">	
+						   <li>
+							  	<p>&ldquo;Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.&rdquo;</p>
+							  	<p class="author-info">— The Guardian</p>
+						   </li>						
+							<li>
+								<p>&ldquo;Good design is as little design as possible. Less, but better - because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity..&rdquo;</p>
+								<p class="author-info">&mdash; Dieter Rams</p>
+							</li>						
+							<li>
+							  <p>“Deep learning is a huge opportunity right now because it enables developers to create applications in a way that was never possible before. Neural networks are a new way of programming computers … It’s a new way of handling data..”</p>
+							  <p class="author-info">&mdash; Jony Ive</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="flexslider-controls animate-this">
+					   <ul class="flex-control-nav">
+					      <li><img src="images/customer01.jpg" alt=""></li>
+					      <li><img src="images/customer02.jpg" alt=""></li>
+					      <li><img src="images/customer03.jpg" alt=""></li>
+					   </ul>
+					</div>
+						
+	   		</div>
+	   	</div>
+	   </section> <!-- /testimonials -->
+
+
+	   <!-- download
+   	================================================== -->
+   	<section id="download">
+
+	   	<div class="overlay"></div>
+
+	   	<div class="row download-content" >
+	   		<div class="col-twelve">
+
+					<div class="text-part">
+					  <h2 class="animate-this">Get In Touch.</h2>
+					  <p class="lead animate-this">Contact Information</p>
+					</div>
+					<a class="button large animate-this" href="#"> Email Nomad</a></div>
+	   	</div>
+   	</section> <!-- /download -->
+
+
+	   <!-- subscribe
+   	================================================== -->
+  		<section id="subscribe">
+               
+         <div class="row subscribe-content">
+            <div class="col-twelve">
+
+               <h2 class="h01 animate-this">Stay upto date, join our newsletter</h2>
+               <form id="mc-form" class="group" novalidate="true" autocomplete="off">
+
+               	<div class="row">
+               		<div class="col-eight tab-full left animate-this" data-animate="fadeInLeft">					
+			   				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter Your Email" required="">			   				
+			   			</div>
+
+				   		<div class="col-four tab-full right animate-this"  data-animate="fadeInRight">
+				   			<input type="submit" value="Get Notified" name="subscribe" class="button large">
+				   		</div>				   		
+               	</div> <!-- /row -->	
+
+               	<label for="mce-EMAIL" class="subscribe-message"></label>					
+					
+					</form>
+            
+            </div>
+         </div>
+                
+      </section> <!-- /subscribe -->		
+   
+   </div> <!-- /main-content-wrap -->
+
+
+   <!-- footer
+	================================================== -->
+	<footer id="main-footer">
+
+   	<div class="footer-social-wrap">  
+   		<div class="row">
+					
+	         <ul class="footer-social-list">
+	            <li><a href="#">
+	             	<i class="fa fa-facebook-square"></i>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-twitter"></i>
+	            </a></li>
+              <li><a href="#">
+	              	<i class="fa fa-google-plus"></i>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-pinterest"></i>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-instagram"></i>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-dribbble"></i>
+	            </a></li>
+	         </ul>
+		         
+			</div> 
+   	</div> <!-- /footer-social-wrap -->
+
+	   <div class="footer-info-wrap">
+
+	   	<div class="row footer-info">
+
+		  		<div class="col-four tab-full">
+		  			<h4><i class="icon-location-map-1"></i> Where to Find Us</h4>
+
+		  			<p>
+		         1600 Amphitheatre Parkway<br>
+		         Mountain View, CA<br>
+		         94043 US
+		         </p>
+		  		</div>
+
+		   	<div class="col-four tab-full collapse">
+	   			<h4><i class="icon-phone-incoming"></i> Get In Touch</h4>
+
+	   			<p>someone@elevatewebsite.com<br>
+				   	info@elevatewebsite.com <br>
+				   	Phone: (+63) 555 1212			     
+				   </p>
+	   		</div>
+
+	   		<div class="col-four tab-full">
+	   			<h4><i class="icon-organization-hierarchy-3"></i> Company Links</h4>
+
+				   <ul class="footer-link-list">
+				   	<li><a href="#">Company Journal</a></li>
+				   	<li><a href="#">Product Support</a></li>
+				   	<li><a href="#">Privacy Policy</a></li>
+				   </ul>
+	   		</div>
+		   		
+		  	</div>
+	   </div> <!-- /footer-info-wrap -->
+	   	
+	   <div class="footer-bottom"> </div>
+	   	
+   </footer>   
+
+   <div id="go-top">
+		<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
 	</div>
 
-	<script src="js/jquery.js"></script>
-	<script src="js/isInViewport.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script>
-		$('#loader').hide()
-		$(function() {
-		  $('a[href*="#"]:not([href="#"])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			  if (target.length) {
-				$('html, body').animate({
-				  scrollTop: target.offset().top
-				}, 1500);
-				return false;
-			  }
-			}
-		  });
-		});
-		$(window).scroll(function(){
-			// $('video').each(function(){
-			// 	if ($(this).is(":in-viewport")) {
-			// 		$(this)[0].play();
-			// 	} else {
-			// 		$(this)[0].pause();
-			// 	}
-			// })
-			if($('.ad_demo')[0].is(":in-viewport")){
-				$('.ad_demo')[0].play()
-			} else {
-				$('.ad_demo')[0].pause()
-			}
-		})
-		$('#recognize').click(function(){
-			var currentIndex = $('div.active').index() // gets which picture
-			$('#json').text('Doing magic...')
-			$('#loader').fadeIn('fast')
-			var recognized = ["Lambskin & Gold-Tone Metal Black & Burgundy Large Classic Handbag", "Nike Flex", "Nike Air Presto"]
-			var urls = ["http://www.chanel.com/en_US/fashion/products/handbags/g/s.large-classic-handbag-lambskin.0V.A58601Y01295C3906.sto.ico.html","http://www.zappos.com/p/nike-flex-2016-rn-black-cool-grey-white/product/8662215/color/69638?zlfid=191&ref=","https://www.endclothing.com/au/nike-air-presto-848132-301.html"]
-			var times = ["0.149s", "0.098s", "0.110s"]
-			var price = ["6000","80.00", "69"]
-			var currency = ["US","US","AU"]
-			setTimeout(function(){
-				$('#loader').hide()
-				$('#json').text('{\n\t"result": {\n\t\t"recognized_as": "' + recognized[currentIndex] + '", \n\t\t"price": '+ price[currentIndex] +', \n\t\t"currency": "'+ currency[currentIndex] +'",\n\t\t"url": "' + urls[currentIndex] + '",\n\t\t"elapsed_time": "'+ times[currentIndex] +'"\n\t}\n}')
-			}, 1000)
-		})
-	</script>
+   <!-- preloader
+   ================================================== -->
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
 </body>
+
+</html>
